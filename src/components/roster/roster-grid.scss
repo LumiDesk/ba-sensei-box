@@ -1,0 +1,54 @@
+@use '../../styles/mixins' as *;
+
+.roster-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+
+  &__section {
+    min-width: 0;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 0 0 10px;
+    padding: 0 2px;
+
+    h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+    }
+
+    span {
+      color: var(--ink-3);
+      font-family: var(--font-mono);
+      font-size: 11px;
+    }
+
+    &::after {
+      height: 1px;
+      flex: 1;
+      margin-left: 6px;
+      background: linear-gradient(90deg, var(--line), transparent);
+      content: '';
+    }
+  }
+
+  &__cards {
+    @include card-grid;
+  }
+
+  &__empty {
+    @include panel;
+
+    display: grid;
+    min-height: 240px;
+    place-items: center;
+    padding: 36px;
+  }
+}

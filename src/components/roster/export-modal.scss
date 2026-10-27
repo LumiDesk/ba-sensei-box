@@ -1,0 +1,65 @@
+@use '../../styles/mixins' as *;
+
+.export-modal {
+  &__title {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+  }
+
+  &__alert {
+    margin-bottom: 14px;
+  }
+
+  &__form {
+    margin-bottom: 4px;
+  }
+
+  &__form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  &__tabs {
+    margin-top: 2px;
+  }
+
+  &__text {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 1.65;
+
+    &--code {
+      word-break: break-all;
+    }
+  }
+
+  &__code-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  &__hint {
+    margin: 0;
+    color: var(--ink-3);
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 560px) {
+  .export-modal__form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

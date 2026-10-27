@@ -1,0 +1,130 @@
+@use '../../styles/mixins' as *;
+
+.summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(360px, 0.75fr);
+  gap: clamp(24px, 4vw, 64px);
+  align-items: end;
+  padding: 26px 2px 30px;
+
+  &__copy {
+    min-width: 0;
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--brand);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+  }
+
+  &__halo {
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--brand);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px var(--brand-soft);
+  }
+
+  h1 {
+    max-width: 760px;
+    margin: 12px 0 10px;
+    color: var(--ink);
+    font-size: clamp(32px, 4.8vw, 58px);
+    font-weight: 850;
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+
+    em {
+      color: var(--brand);
+      font-style: normal;
+      white-space: nowrap;
+    }
+  }
+
+  p {
+    max-width: 620px;
+    margin: 0;
+    color: var(--ink-2);
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  &__meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    color: var(--ink-3);
+    font-family: var(--font-mono);
+    font-size: 11px;
+  }
+
+  &__panel {
+    @include panel;
+
+    padding: 14px;
+    background: color-mix(in srgb, var(--surface) 82%, transparent);
+    backdrop-filter: blur(14px);
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  &__progress {
+    padding: 14px 4px 2px;
+  }
+
+  &__progress-label {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    color: var(--ink-3);
+    font-size: 11px;
+
+    strong {
+      color: var(--brand);
+      font-family: var(--font-mono);
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .summary {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    align-items: start;
+  }
+
+  .summary__stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .summary {
+    padding-top: 16px;
+  }
+
+  .summary h1 {
+    font-size: clamp(30px, 9vw, 42px);
+  }
+
+  .summary__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .summary__meta {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}

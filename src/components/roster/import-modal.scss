@@ -1,0 +1,30 @@
+.import-modal {
+  &__title {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+  }
+
+  &__hint {
+    margin: 0 0 12px;
+    color: var(--ink-3);
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  &__alert {
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    font-family: var(--font-mono);
+    font-size: 12px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+}

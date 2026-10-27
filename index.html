@@ -1,13 +1,35 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ba-sensei-box</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta
+      name="description"
+      content="蔚蓝档案国际服学生清单：离线勾选你拥有的学生，生成可导入的名单码，方便配队与 box 管理。"
+    />
+    <meta name="theme-color" content="#f3f7ff" />
+    <title>Sensei Box · 蔚蓝档案国际服学生清单</title>
+    <script>
+      ;(() => {
+        try {
+          const stored = localStorage.getItem('ba-sensei-box:theme') || 'system'
+          const query = new URLSearchParams(location.search).get('theme')
+          const mode = ['system', 'light', 'dark'].includes(query) ? query : stored
+          const dark =
+            mode === 'dark' ||
+            (mode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+          document.documentElement.dataset.theme = dark ? 'dark' : 'light'
+          document.documentElement.style.colorScheme = dark ? 'dark' : 'light'
+        } catch {
+          document.documentElement.dataset.theme = 'light'
+        }
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>这个页面需要 JavaScript 才能勾选学生；请在浏览器设置中启用 JavaScript。</noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

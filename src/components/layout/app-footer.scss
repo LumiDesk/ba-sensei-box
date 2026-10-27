@@ -1,0 +1,30 @@
+@use '../../styles/mixins' as *;
+
+.app-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 54px;
+  padding: 22px 2px 0;
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: 11px;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4px 18px;
+  }
+
+  &__row--muted {
+    color: var(--ink-3);
+    opacity: 0.72;
+  }
+
+  &__mono {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+}

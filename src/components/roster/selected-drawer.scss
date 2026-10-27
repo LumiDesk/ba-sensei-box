@@ -1,0 +1,41 @@
+@use '../../styles/mixins' as *;
+
+.selected-drawer {
+  &__title {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+  }
+
+  &__list {
+    padding: 0 4px;
+  }
+
+  &__name {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  &__meta {
+    color: var(--ink-3);
+    font-size: 11px;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--ink-3);
+    font-size: 11px;
+  }
+
+  &__footer-actions {
+    display: flex;
+    gap: 6px;
+  }
+}

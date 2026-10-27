@@ -1,0 +1,42 @@
+@use '../styles/mixins' as *;
+
+.workflow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin: 0 0 18px;
+  padding: 10px 2px;
+  color: var(--ink-3);
+  font-size: 11px;
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  strong {
+    display: inline-grid;
+    width: 22px;
+    height: 22px;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    color: var(--brand);
+    background: var(--brand-softer);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding-top: 16px;
+  }
+
+  .workflow {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+}

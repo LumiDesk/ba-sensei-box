@@ -1,0 +1,135 @@
+@use '../../styles/mixins' as *;
+
+.toolbar {
+  position: sticky;
+  z-index: 30;
+  top: var(--header-h);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 22px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(18px) saturate(1.1);
+
+  &__primary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__search {
+    width: clamp(220px, 26vw, 360px);
+    flex: 1 1 240px;
+  }
+
+  &__view {
+    flex: none;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-left: auto;
+  }
+
+  &__filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    padding-top: 9px;
+    border-top: 1px dashed var(--line);
+  }
+
+  &__filter-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 2px;
+    color: var(--ink-3);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  &__select {
+    width: 96px;
+
+    &--school {
+      width: 110px;
+    }
+
+    &--sort {
+      width: 116px;
+    }
+  }
+
+  &__rarity {
+    margin-left: 2px;
+  }
+
+  &__result {
+    margin-left: auto;
+    color: var(--ink-3);
+    font-size: 11px;
+    white-space: nowrap;
+
+    strong {
+      color: var(--ink);
+      font-family: var(--font-mono);
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .toolbar {
+    position: static;
+    padding: 10px;
+
+    &__search {
+      width: 100%;
+      flex-basis: 100%;
+    }
+
+    &__actions {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    &__actions .ant-btn {
+      flex: 1 1 auto;
+    }
+
+    &__select {
+      width: calc(33.333% - 4px);
+    }
+
+    &__select--school {
+      width: calc(33.333% - 4px);
+    }
+
+    &__select--sort {
+      width: calc(50% - 3px);
+    }
+
+    &__result {
+      width: 100%;
+      margin-left: 0;
+      padding-top: 4px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .toolbar__view,
+  .toolbar__rarity {
+    width: 100%;
+  }
+}
