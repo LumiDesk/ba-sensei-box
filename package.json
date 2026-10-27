@@ -22,7 +22,7 @@
     "test:watch": "vitest",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
-    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build",
+    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build",
     "data:sync": "node scripts/sync-students.mjs"
   },
   "dependencies": {

@@ -108,18 +108,18 @@ src/
 
 ## 常用命令
 
-| 命令                                | 作用                            |
-| ----------------------------------- | ------------------------------- |
-| `pnpm dev`                          | 启动开发服务器                  |
-| `pnpm build`                        | 类型检查 + 生产构建             |
-| `pnpm preview`                      | 预览构建产物                    |
-| `pnpm lint`                         | Oxlint                          |
-| `pnpm lint:fix`                     | Oxlint 自动修复                 |
-| `pnpm typecheck`                    | TypeScript                      |
-| `pnpm test`                         | Vitest                          |
-| `pnpm format` / `pnpm format:check` | Prettier                        |
-| `pnpm check`                        | lint + typecheck + test + build |
-| `pnpm data:sync`                    | 从 SchaleDB 同步学生与头像      |
+| 命令                                | 作用                                     |
+| ----------------------------------- | ---------------------------------------- |
+| `pnpm dev`                          | 启动开发服务器                           |
+| `pnpm build`                        | 类型检查 + 生产构建                      |
+| `pnpm preview`                      | 预览构建产物                             |
+| `pnpm lint`                         | Oxlint                                   |
+| `pnpm lint:fix`                     | Oxlint 自动修复                          |
+| `pnpm typecheck`                    | TypeScript                               |
+| `pnpm test`                         | Vitest                                   |
+| `pnpm format` / `pnpm format:check` | Prettier                                 |
+| `pnpm check`                        | format + lint + typecheck + test + build |
+| `pnpm data:sync`                    | 从 SchaleDB 同步学生与头像               |
 
 ## 技术栈
 

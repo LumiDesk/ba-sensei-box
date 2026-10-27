@@ -15,7 +15,7 @@
 ```bash
 pnpm install
 pnpm dev
-pnpm check          # lint -> typecheck -> test -> build
+pnpm check          # format -> lint -> typecheck -> test -> build
 pnpm build          # tsc -b + vite build，产物在 dist/
 pnpm test           # Vitest（纯逻辑，不启动浏览器）
 pnpm data:sync      # 从 SchaleDB 同步学生与头像
