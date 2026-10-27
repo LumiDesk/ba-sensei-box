@@ -1,0 +1,48 @@
+{
+  "schools": {
+    "Abydos": { "code": "abydos", "label": "阿拜多斯", "order": 1 },
+    "Gehenna": { "code": "gehenna", "label": "格黑娜", "order": 2 },
+    "Millennium": { "code": "millennium", "label": "千年", "order": 3 },
+    "Trinity": { "code": "trinity", "label": "三一", "order": 4 },
+    "Hyakkiyako": { "code": "hyakkiyako", "label": "百鬼夜行", "order": 5 },
+    "Shanhaijing": { "code": "shanhaijing", "label": "山海经", "order": 6 },
+    "RedWinter": { "code": "redwinter", "label": "红冬", "order": 7 },
+    "Arius": { "code": "arius", "label": "阿里乌斯", "order": 8 },
+    "SRT": { "code": "srt", "label": "SRT", "order": 9 },
+    "Valkyrie": { "code": "valkyrie", "label": "女武神", "order": 10 },
+    "WildHunt": { "code": "wildhunt", "label": "狂猎", "order": 11 },
+    "Highlander": { "code": "highlander", "label": "高地", "order": 12 },
+    "Tokiwadai": { "code": "tokiwadai", "label": "常盘台", "order": 13 },
+    "Sakugawa": { "code": "sakugawa", "label": "佐久川", "order": 14 },
+    "ETC": { "code": "etc", "label": "其他", "order": 99 }
+  },
+  "roles": {
+    "DamageDealer": { "code": "dealer", "label": "输出", "color": "#ef4444", "order": 1 },
+    "Tanker": { "code": "tank", "label": "坦克", "color": "#3b82f6", "order": 2 },
+    "Healer": { "code": "healer", "label": "治疗", "color": "#22c55e", "order": 3 },
+    "Supporter": { "code": "support", "label": "辅助", "color": "#a855f7", "order": 4 },
+    "Vehicle": { "code": "vehicle", "label": "载具", "color": "#94a3b8", "order": 5 }
+  },
+  "attacks": {
+    "Explosion": { "code": "explosion", "label": "爆炸", "color": "#f97316", "order": 1 },
+    "Pierce": { "code": "pierce", "label": "贯穿", "color": "#eab308", "order": 2 },
+    "Mystic": { "code": "mystic", "label": "神秘", "color": "#a855f7", "order": 3 },
+    "Sonic": { "code": "sonic", "label": "振动", "color": "#06b6d4", "order": 4 }
+  },
+  "armors": {
+    "LightArmor": { "code": "light", "label": "轻甲", "color": "#f59e0b", "order": 1 },
+    "HeavyArmor": { "code": "heavy", "label": "重甲", "color": "#64748b", "order": 2 },
+    "Unarmed": { "code": "special", "label": "特殊装甲", "color": "#14b8a6", "order": 3 },
+    "ElasticArmor": { "code": "elastic", "label": "弹性装甲", "color": "#ec4899", "order": 4 },
+    "CompositeArmor": { "code": "composite", "label": "复合装甲", "color": "#6366f1", "order": 5 }
+  },
+  "positions": {
+    "Front": { "code": "front", "label": "前排", "order": 1 },
+    "Middle": { "code": "middle", "label": "中排", "order": 2 },
+    "Back": { "code": "back", "label": "后排", "order": 3 }
+  },
+  "squads": {
+    "Main": { "code": "main", "label": "突击", "order": 1 },
+    "Support": { "code": "support", "label": "支援", "order": 2 }
+  }
+}

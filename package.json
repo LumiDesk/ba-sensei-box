@@ -3,13 +3,24 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "packageManager": "pnpm@12.15.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint . --fix",
+    "typecheck": "tsc -b",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build",
+    "data:sync": "node scripts/sync-students.mjs"
   },
   "dependencies": {
+    "@ant-design/icons": "^6.3.4",
+    "antd": "^6.6.8",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },
@@ -19,7 +30,11 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
     "oxlint": "^1.88.0",
+    "prettier": "^3.9.10",
+    "sass": "^1.106.1",
     "typescript": "~6.0.3",
-    "vite": "^8.3.4"
+    "vite": "^8.3.4",
+    "vite-plugin-singlefile": "^2.3.4",
+    "vitest": "^5.0.5"
   }
 }
