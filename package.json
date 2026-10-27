@@ -6,6 +6,14 @@
   "type": "module",
   "license": "MIT",
   "author": "Talyra42",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LumiDesk/ba-sensei-box.git"
+  },
+  "homepage": "https://github.com/LumiDesk/ba-sensei-box#readme",
+  "bugs": {
+    "url": "https://github.com/LumiDesk/ba-sensei-box/issues"
+  },
   "packageManager": "pnpm@12.15.0",
   "engines": {
     "node": ">=24",

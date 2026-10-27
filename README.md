@@ -1,8 +1,13 @@
 # ba-sensei-box
 
+[![CI](https://github.com/LumiDesk/ba-sensei-box/actions/workflows/ci.yml/badge.svg)](https://github.com/LumiDesk/ba-sensei-box/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 > 蔚蓝档案（国际服）离线学生清单：勾选你的 box，生成一份 Sensei 能直接读懂的名单。
 
 `ba-sensei-box` 是一个纯前端、离线优先的学生持有清单工具。它把国际服当前已实装的学生做成可筛选的卡片墙，点选后生成一份包含名单码、可读名单和 JSON 的交付物，方便后续配队讨论。
+
+仓库：<https://github.com/LumiDesk/ba-sensei-box>
 
 ![浅色模式预览](docs/assets/preview-light.webp)
 
