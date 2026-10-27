@@ -7,7 +7,8 @@
 
 `ba-sensei-box` 是一个纯前端、离线优先的学生持有清单工具。它把国际服当前已实装的学生做成可筛选的卡片墙，点选后生成一份包含名单码、可读名单和 JSON 的交付物，方便后续配队讨论。
 
-仓库：<https://github.com/LumiDesk/ba-sensei-box>
+- 仓库：<https://github.com/LumiDesk/ba-sensei-box>
+- 在线预览：<https://ba-sensei-box.vercel.app>
 
 ![浅色模式预览](docs/assets/preview-light.webp)
 
