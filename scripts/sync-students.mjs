@@ -124,7 +124,9 @@ function normalizeStudent(student, english, taxonomy) {
     squad: mapEnum(taxonomy, 'squads', student.SquadType, student),
     icon: `students/icons/${student.Id}.webp`,
     tags: Array.isArray(student.SearchTags)
-      ? student.SearchTags.filter((tag) => typeof tag === 'string' && tag.trim()).map((tag) => tag.trim())
+      ? student.SearchTags.filter((tag) => typeof tag === 'string' && tag.trim()).map((tag) =>
+          tag.trim(),
+        )
       : [],
   }
 }
@@ -150,17 +152,15 @@ async function downloadIcon(id) {
 }
 
 async function mapWithConcurrency(items, limit, worker) {
-  const results = new Array(items.length)
   let cursor = 0
   async function run() {
     while (cursor < items.length) {
       const index = cursor
       cursor += 1
-      results[index] = await worker(items[index], index)
+      await worker(items[index], index)
     }
   }
   await Promise.all(Array.from({ length: Math.min(limit, items.length) }, run))
-  return results
 }
 
 async function main() {
@@ -184,7 +184,7 @@ async function main() {
   // the Global client, and report every dropped duplicate.
   const byName = new Map()
   const dropped = []
-  for (const student of globalStudents.sort((a, b) => a.Id - b.Id)) {
+  for (const student of globalStudents.toSorted((a, b) => a.Id - b.Id)) {
     const key = String(student.Name ?? '').trim()
     if (byName.has(key)) {
       dropped.push(`${key} (${student.Id})`)
@@ -203,7 +203,7 @@ async function main() {
   const usedOrders = new Set(previousOrder.values())
   let nextOrder = usedOrders.size > 0 ? Math.max(...usedOrders) + 1 : 0
 
-  const students = []
+  let students = []
   for (const student of byName.values()) {
     const mapped = normalizeStudent(student, englishById.get(student.Id), taxonomy)
     if (!mapped) {
@@ -216,7 +216,7 @@ async function main() {
     students.push(mapped)
   }
 
-  students.sort((a, b) => a.order - b.order)
+  students = students.toSorted((a, b) => a.order - b.order)
   if (new Set(students.map((student) => student.order)).size !== students.length) {
     fail('Duplicate order values detected; refusing to write an unstable roster codec.')
   }
